@@ -1,0 +1,53 @@
+import re
+
+# Your original content goes here (use the full content in place of this placeholder)
+original_content = """
+Navigating travel plans (+1-(855) - (550 )- (0971) can sometimes require a little extra assistance...
+"""
+
+# Function to clean up repetitive phone numbers
+def clean_phone_numbers(text):
+    return re.sub(r"\(\+1-\(855\) - \(550 \)- \(0971\)\)", "+1 (855) 550-0971", text)
+
+# Wrap the cleaned content in a styled HTML template
+def generate_html(content):
+    content = clean_phone_numbers(content)
+    html_template = f"""
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>American Airlines Support</title>
+        <style>
+            body {{
+                font-family: Arial, sans-serif;
+                background: linear-gradient(to right, #eef2f3, #8e9eab);
+                padding: 30px;
+                color: #333;
+            }}
+            .container {{
+                background: white;
+                border-radius: 10px;
+                padding: 40px;
+                max-width: 900px;
+                margin: auto;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            }}
+            h1 {{
+                color: #0078D7;
+                margin-bottom: 20px;
+            }}
+            p {{
+                line-height: 1.7;
+                margin-bottom: 15px;
+            }}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>How to Contact American Airlines Support "Guide Customer Service"</h1>
+            <p>{content}</p>
+        </div>
+    </body>
+    </html
